@@ -29,6 +29,7 @@ class _DoctorProfilePageState extends State<DoctorProfilePage> {
         child: ElevatedButton(
           onPressed: () {
             Map<String ,dynamic> data={
+              "id":1,
               "available":"yes"
             };
             FirebaseFirestore.instance.collection("test").add(data); },
