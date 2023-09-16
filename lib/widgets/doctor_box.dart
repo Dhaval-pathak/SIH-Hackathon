@@ -47,9 +47,9 @@ class DoctorBox extends StatelessWidget {
             SizedBox(height: 3),
             Row(
               children: [
-                Icon(Icons.star, color: Colors.yellow, size: 14,), 
+                Icon(Icons.circle, color: Colors.green, size: 14,),
                 SizedBox(width: 2,),
-                Text("${doctor["review"]} Review", style: TextStyle(fontSize: 12),)
+                Text("Doctors Avaliable", style: TextStyle(fontSize: 12),)
               ],
             ),
             SizedBox(height: 3),

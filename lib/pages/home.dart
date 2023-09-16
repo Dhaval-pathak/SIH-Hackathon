@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
           BottomNavyBarItem(
             activeColor: primary,
             inactiveColor: Colors.black,
-            title: Text('Doctor'),
+            title: Text('Hospital'),
             icon: Icon(Icons.medical_services_rounded)
           ),
           BottomNavyBarItem(

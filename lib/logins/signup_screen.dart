@@ -17,6 +17,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+  TextEditingController d = TextEditingController();
+  TextEditingController e = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +53,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
+                reusableTextField(
+                    "Enter Contact", Icons.phone, true, d),
+                const SizedBox(
+                  height: 20,
+                ),
+                reusableTextField(
+                    "Enter Location", Icons.gps_fixed_sharp, true, e),
+                const SizedBox(
+                  height: 20,
+                ),
                 reusableTextField("Enter Email Id", Icons.person_outline, false,
                     _emailTextController),
                 const SizedBox(
@@ -61,6 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
+
                 firebaseUIButton(context, "Sign Up", () {
                   FirebaseAuth.instance
                       .createUserWithEmailAndPassword(

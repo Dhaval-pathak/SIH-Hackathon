@@ -30,10 +30,11 @@ class _DoctorProfilePageState extends State<DoctorProfilePage> {
           onPressed: () {
             Map<String ,dynamic> data={
               "id":1,
-              "available":"yes"
+              "available":"yes",
+
             };
             FirebaseFirestore.instance.collection("test").add(data); },
-          child: const Text("book"),
+          child: const Text("Request Appointment"),
         )
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -79,15 +80,7 @@ class _DoctorProfilePageState extends State<DoctorProfilePage> {
           SizedBox(height: 3, ),
           Text("340 Patients review", style: TextStyle(color: Colors.grey, fontSize: 12),),
           SizedBox(height: 25, ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ContactBox(icon: Icons.videocam_rounded, color: Colors.blue,),
-              ContactBox(icon: Icons.call_end, color: Colors.green,),
-              ContactBox(icon: Icons.chat_rounded, color: Colors.purple,),
-            ],
-          ),
-          SizedBox(height: 25, ),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
