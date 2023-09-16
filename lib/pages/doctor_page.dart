@@ -24,7 +24,7 @@ class _DoctorPageState extends State<DoctorPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text("Doctors", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+        title: Text("Hospitals", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10)
@@ -51,7 +51,40 @@ class _DoctorPageState extends State<DoctorPage> {
                   children: [
                     Expanded(child: CustomTextBox()),
                     SizedBox(width: 5,),
-                    Icon(Icons.filter_list_rounded, color: primary, size: 35,),
+                    IconButton(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Sort By'),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  ListTile(
+                                    title: Text('Location'),
+                                    onTap: () {
+                                      // Add logic for sorting by location
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    title: Text('Hospital Speciality'),
+                                    onTap: () {
+                                      // Add logic for sorting by hospital speciality
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  // Add more sorting options as needed
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
+                      icon: Icon(Icons.filter_list_rounded),
+                    )
+
                   ],
                 ),
                 SizedBox(height: 20,),

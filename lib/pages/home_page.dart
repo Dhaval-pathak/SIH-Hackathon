@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(height: 25,),
-                Container(child: Text("Popular Doctors", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
+                Container(child: Text("Hospital You May Like", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),)),
                 SizedBox(height: 10),
                 SingleChildScrollView(
                   padding: EdgeInsets.only(bottom: 5),
